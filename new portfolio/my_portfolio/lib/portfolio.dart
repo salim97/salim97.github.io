@@ -6,7 +6,7 @@ import 'package:simple_icons/simple_icons.dart';
 
 String full_name = "Salim Benabadji";
 String logo_name = "Salim";
-String nickname = "Developer and Technical Writer";
+List<String> nickname = [" Flutter Developer", " Technical Writer", " Embedded System Enthusiast"];
 String subTitle =
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.";
 String resumeLink = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
@@ -280,19 +280,41 @@ const projects = [
   },
 ];
 
+const flutter_projects = [
+  {
+    "title": "University Graduation Project Air Quality System",
+    "subtitle": "A contributed air quality system deployed in algeria",
+    "cover_image_url": "assets/images/flutter_air_quality_system.png",
+    "repository_url": "https://github.com/salim97/University-Graduation-Project-Air-Quality-System",
+    "youtube_url": "https://www.youtube.com/watch?v=wNRK7oKOohI",
+  },
+  {
+    "title": "My School ERP",
+    "subtitle": "School ERP is a complete platform for schools.",
+    "cover_image_url": "assets/images/flutter_school_erp.png",
+    "repository_url": "https://github.com/salim97/mySchool-ERP",
+    "youtube_url": "https://www.youtube.com/watch?v=rZycitWz3bI",
+  },
+  {
+    "title": "My Portfolio with Flutter Web",
+    "subtitle":
+        "rebuilding my portfolio using flutter web",
+    "cover_image_url": "assets/images/flutter_portfolio.png",
+    "repository_url": "https://github.com/salim97/salim97.github.io",
+    "youtube_url": null,
+  },
+];
 
 const contactPageData = {
   "contactSection": {
     "title": "Contact Me",
     "profile_image_path": "assets/images/me.png",
     "description":
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ESP8266, ESP32, Flutter, Linux CLI, Qt  Development.",
+        "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ESP8266, ESP32, Flutter, Linux CLI, Qt  Development.",
   },
-
   "addressSection": {
     "title": "Address",
-    "subtitle":
-      "Algeria, Oran",
+    "subtitle": "Algeria, Oran",
     "avatar_image_path": "assets/images/address_image.png",
     "location_map_link": "https://goo.gl/maps/L8LFwWQ4GkjQqj1V9",
   },

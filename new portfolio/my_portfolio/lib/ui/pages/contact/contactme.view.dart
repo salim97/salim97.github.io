@@ -63,7 +63,14 @@ class _ContactMeViewState extends State<ContactMeView> {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: FloatingActionButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            final url = g.socialMediaLinks.elementAt(index)["link"].toString();
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
+                          },
                           child: FaIcon(g.socialMediaLinks.elementAt(index)["fontAwesomeIcon"] as IconData),
                           backgroundColor: g.socialMediaLinks.elementAt(index)["backgroundColor"] as Color,
                         ),
@@ -75,12 +82,12 @@ class _ContactMeViewState extends State<ContactMeView> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: MyTheme.jacketColor),
                       onPressed: () async {
-                        // final url = project["youtube_url"];
-                        // if (await canLaunch(url)) {
-                        //   await launch(url);
-                        // } else {
-                        //   throw 'Could not launch $url';
-                        // }
+                        final url = g.resumeLink;
+                        if (await canLaunch(url)) {
+                          await launch(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
@@ -138,7 +145,7 @@ class _ContactMeViewState extends State<ContactMeView> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       g.contactPageData["addressSection"]!["subtitle"].toString(),
-                      style: widget.theme.textTheme.subtitle1,
+                      style: widget.theme.textTheme.subtitle1!.copyWith(fontWeight: FontWeight.w400),
                     ),
                   ),
                   Padding(
@@ -152,7 +159,7 @@ class _ContactMeViewState extends State<ContactMeView> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       g.contactPageData["phoneSection"]!["subtitle"].toString(),
-                      style: widget.theme.textTheme.subtitle1,
+                      style: widget.theme.textTheme.subtitle1!.copyWith(fontWeight: FontWeight.w400),
                     ),
                   ),
                   Padding(
@@ -160,12 +167,12 @@ class _ContactMeViewState extends State<ContactMeView> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(primary: MyTheme.jacketColor),
                       onPressed: () async {
-                        // final url = project["youtube_url"];
-                        // if (await canLaunch(url)) {
-                        //   await launch(url);
-                        // } else {
-                        //   throw 'Could not launch $url';
-                        // }
+                        final url = g.contactPageData["addressSection"]!["location_map_link"].toString();
+                        if (await canLaunch(url)) {
+                          await launch(url);
+                        } else {
+                          throw 'Could not launch $url';
+                        }
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),

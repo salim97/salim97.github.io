@@ -62,6 +62,10 @@ class MyTheme {
     subtitle2: TextStyle(fontSize: 20.0, fontFamily: "Google Sans BoldItalic", color: secondaryText_color, fontWeight: FontWeight.w400),
    
   
+    headline4: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Medium", color: text_color, fontWeight: FontWeight.w700),
+    bodyText2: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Regular", color: text_color, fontWeight: FontWeight.w400),
+    
+
     caption: GoogleFonts.lato(fontSize: 13, fontWeight: FontWeight.w400, letterSpacing: 0.4),
     overline: GoogleFonts.lato(fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: 1.5),
   );
@@ -77,6 +81,9 @@ class MyTheme {
     subtitle2: TextStyle(fontSize: 16.0, fontFamily: "Google Sans BoldItalic", color: secondaryText_color, fontWeight: FontWeight.w400),
    
   
+    headline4: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Medium", color: text_color, fontWeight: FontWeight.w700),
+    bodyText2: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Regular", color: text_color, fontWeight: FontWeight.w400),
+    
     caption: GoogleFonts.lato(fontSize: 13, fontWeight: FontWeight.w400, letterSpacing: 0.4),
     overline: GoogleFonts.lato(fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: 1.5),
   );
