@@ -72,12 +72,12 @@ class _ProjectsMobile extends StatelessWidget {
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(primary: MyTheme.jacketColor),
           onPressed: () async {
-            // final url = project["youtube_url"];
-            // if (await canLaunch(url)) {
-            //   await launch(url);
-            // } else {
-            //   throw 'Could not launch $url';
-            // }
+            final url = g.github_repository_link;
+            if (await canLaunch(url)) {
+              await launch(url);
+            } else {
+              throw 'Could not launch $url';
+            }
           },
           child: Padding(
             padding: const EdgeInsets.all(10.0),
