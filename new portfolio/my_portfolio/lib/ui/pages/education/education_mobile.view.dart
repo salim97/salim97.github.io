@@ -87,7 +87,7 @@ class _EducationMobile extends StatelessWidget {
           ),
           SizedBox(
             width: width * 0.8,
-            height: height * 0.6,
+            height: height * 0.7,
             child: Card(
               elevation: 10.0,
               color: Colors.transparent,

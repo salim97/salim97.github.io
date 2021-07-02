@@ -97,6 +97,7 @@ class _MainWindowState extends State<MainWindow> {
                     setState(() {
                       menu = Menu.home;
                     });
+                    Navigator.pop(context);
                   },
                   child: Text(
                     "Home",
@@ -112,6 +113,7 @@ class _MainWindowState extends State<MainWindow> {
                     setState(() {
                       menu = Menu.education;
                     });
+                    Navigator.pop(context);
                   },
                   child: Text(
                     "Education",
@@ -127,6 +129,7 @@ class _MainWindowState extends State<MainWindow> {
                     setState(() {
                       menu = Menu.projects;
                     });
+                    Navigator.pop(context);
                   },
                   child: Text(
                     "Projects",
@@ -142,6 +145,7 @@ class _MainWindowState extends State<MainWindow> {
                     setState(() {
                       menu = Menu.contact_me;
                     });
+                    Navigator.pop(context);
                   },
                   child: Text(
                     "Contact Me",
@@ -194,7 +198,8 @@ class _MainWindowState extends State<MainWindow> {
                             },
                             child: Text(
                               "Home",
-                              style: _theme.textTheme.button!.copyWith(fontWeight: menu == Menu.home ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
+                              style: _theme.textTheme.button!
+                                  .copyWith(fontWeight: menu == Menu.home ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
                         ),
@@ -210,8 +215,8 @@ class _MainWindowState extends State<MainWindow> {
                             },
                             child: Text(
                               "Education",
-                              style:
-                                  _theme.textTheme.button!.copyWith(fontWeight: menu == Menu.education ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
+                              style: _theme.textTheme.button!
+                                  .copyWith(fontWeight: menu == Menu.education ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
                         ),
@@ -227,8 +232,8 @@ class _MainWindowState extends State<MainWindow> {
                             },
                             child: Text(
                               "Projects",
-                              style:
-                                  _theme.textTheme.button!.copyWith(fontWeight: menu == Menu.projects ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
+                              style: _theme.textTheme.button!
+                                  .copyWith(fontWeight: menu == Menu.projects ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
                         ),
