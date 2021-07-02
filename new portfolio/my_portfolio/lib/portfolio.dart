@@ -6,7 +6,7 @@ import 'package:simple_icons/simple_icons.dart';
 
 String full_name = "Salim Benabadji";
 String logo_name = "Salim";
-List<String> nickname = [" Flutter Developer", " Technical Writer", " Embedded System Enthusiast"];
+List<String> nickname = [" Flutter Developer", " Technical Writer", " Embedded System"];
 String subTitle =
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.";
 String resumeLink = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
@@ -251,7 +251,7 @@ const certifications = [
 const projects = [
   {
     "title": "Qt QML Digital Servo Motor MG 996R Application",
-    "subtitle": "Control Digital Servo Motor on real time, using application cross platform ( windows, android  ) ",
+    "subtitle": "Control Digital Servo Motor on real time.",
     "cover_image_url": "assets/images/youtube-servo-motor-2018.gif",
     "repository_url": "https://github.com/salim97/My-Digital-Servo-Motor",
     "youtube_url": "https://www.youtube.com/watch?v=EHaF01cJuXc",
@@ -259,14 +259,14 @@ const projects = [
   {
     "title": "My Mini Radar - Qt + ESP8266 + MG996R + HC SR04",
     "subtitle":
-        "building simple radar using ESP8266 and servo motor MG 996R and HC-SR04, and the application is cross platform (windows, android ...).",
+        "building simple radar using ESP8266 and servo motor MG 996R and HC-SR04.",
     "cover_image_url": "assets/images/My-Mini-Radar.gif",
     "repository_url": "https://github.com/salim97/My-Mini-Radar",
     "youtube_url": "https://www.youtube.com/watch?v=iYSFZ4Aru64",
   },
   {
     "title": "Qt QML Matrix LED Designer Application",
-    "subtitle": "Real time painting on matrix led 7x5, using esp8266 and qt application cross platform ( android, windows, ... )",
+    "subtitle": "Real time painting on matrix led 7x5, using esp8266 and Qt5",
     "cover_image_url": "assets/images/My-LED-Matrix-Designer.jpg",
     "repository_url": "https://github.com/salim97/My-LED-Matrix-Designer",
     "youtube_url": "https://www.youtube.com/watch?v=nxqmDQN6-Xw",

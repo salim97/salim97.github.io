@@ -72,17 +72,17 @@ class MyTheme {
 
   static TextTheme textThemeMobile = TextTheme(
     headline1: TextStyle(fontSize: 30.0, fontFamily: "Google Sans Bold", color: text_color, fontWeight: FontWeight.w700),
-    subtitle1: TextStyle(fontSize: 25.0, fontFamily: "Google Sans BoldItalic", color: text_color, fontWeight: FontWeight.w700),
-    bodyText1: TextStyle(fontSize: 16.0, fontFamily: "Google Sans Medium", color: secondaryText_color, fontWeight: FontWeight.w400),
-    button: TextStyle(fontSize: 15.0, fontFamily: "Google Sans Regular", color: Color.fromRGBO(237, 249, 254, 1), fontWeight: FontWeight.w500),
+    subtitle1: TextStyle(fontSize: 25.0, fontFamily: "Google Sans BoldItalic", color: text_color, fontWeight: FontWeight.w100),
+    bodyText1: TextStyle(fontSize: 19.0, fontFamily: "Google Sans Medium", color: secondaryText_color, fontWeight: FontWeight.w400),
+    button: TextStyle(fontSize: 17.0, fontFamily: "Google Sans Regular", color: Color.fromRGBO(237, 249, 254, 1), fontWeight: FontWeight.w500),
    
     headline2: TextStyle(fontSize: 30.0, fontFamily: "Google Sans Bold", color: text_color, fontWeight: FontWeight.w700),
     headline3: TextStyle(fontSize: 30.0, fontFamily: "Google Sans Bold", color: text_color, fontWeight: FontWeight.w400),
     subtitle2: TextStyle(fontSize: 16.0, fontFamily: "Google Sans BoldItalic", color: secondaryText_color, fontWeight: FontWeight.w400),
    
   
-    headline4: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Medium", color: text_color, fontWeight: FontWeight.w700),
-    bodyText2: TextStyle(fontSize: 20.0, fontFamily: "Google Sans Regular", color: text_color, fontWeight: FontWeight.w400),
+    headline4: TextStyle(fontSize: 16.0, fontFamily: "Google Sans Medium", color: text_color, fontWeight: FontWeight.w700),
+    bodyText2: TextStyle(fontSize: 16.0, fontFamily: "Google Sans Regular", color: text_color, fontWeight: FontWeight.w400),
     
     caption: GoogleFonts.lato(fontSize: 13, fontWeight: FontWeight.w400, letterSpacing: 0.4),
     overline: GoogleFonts.lato(fontSize: 10, fontWeight: FontWeight.w400, letterSpacing: 1.5),

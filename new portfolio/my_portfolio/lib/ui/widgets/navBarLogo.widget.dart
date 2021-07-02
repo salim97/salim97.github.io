@@ -8,7 +8,9 @@ class NavBarLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: onTap(),
+      onTap: () {
+        onTap();
+      },
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
