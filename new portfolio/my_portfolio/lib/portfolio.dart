@@ -289,7 +289,7 @@ const flutter_projects = [
     "youtube_url": "https://www.youtube.com/watch?v=wNRK7oKOohI",
   },
   {
-    "title": "My School ERP",
+    "title": "School ERP",
     "subtitle": "School ERP is a complete platform for schools.",
     "cover_image_url": "assets/images/flutter_school_erp.png",
     "repository_url": "https://github.com/salim97/mySchool-ERP",
