@@ -27,9 +27,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(tablet: 760, desktop: 1380, watch: 300),
-      mobile: _HomeMobile(theme),
       desktop: _HomeDesktop(theme),
-      tablet: _HomeDesktop(theme),
+      tablet: _HomeTablet(theme),
+      mobile: _HomeMobile(theme),
     );
   }
 }

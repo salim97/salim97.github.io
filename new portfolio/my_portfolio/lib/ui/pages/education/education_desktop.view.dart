@@ -286,4 +286,5 @@ class _EducationDesktop extends StatelessWidget {
       ),
     );
   }
+
 }

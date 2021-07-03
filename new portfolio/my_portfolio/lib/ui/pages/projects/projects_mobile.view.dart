@@ -240,105 +240,103 @@ class _ProjectsMobile extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40.0, horizontal: 0.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
       child: GridView.count(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 1,
-        crossAxisSpacing: 50,
-        mainAxisSpacing: 50,
-        childAspectRatio: 0.6,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        childAspectRatio: (width / height) +0.25,
         children: projects.map((project) {
-          return GestureDetector(
-            onTap: () async {
-              final url = project["certificate_link"];
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw 'Could not launch $url';
-              }
-            },
-            child: Card(
-              elevation: 10.0,
-              color: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: Column(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      // width: double.infinity,
-                      // color: MyTheme.card_header_color,
-                      // decoration: BoxDecoration(
-                      //   color: certification["color_code"] as Color,
-                      //   shape: BoxShape.rectangle,
-                      //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
-                      // ),
-                      child: Image.asset(
-                        project["cover_image_url"],
-                        height: 250,
-                        width: double.infinity,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
+          return Column(
+            children: [
+              HoverButton(
+                onpressed: () async {
+                  final url = project["repository_url"];
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+                child: Card(
+                  elevation: 1.0,
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      // height: 150,
-                      width: double.infinity,
-                      // color: MyTheme.card_body_color,
-                      decoration: BoxDecoration(
-                        color: MyTheme.card_body_color,
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0)),
+                  child: Column(
+                    children: [
+                      Container(
+                        // width: double.infinity,
+                        // color: MyTheme.card_header_color,
+                        // decoration: BoxDecoration(
+                        //   color: certification["color_code"] as Color,
+                        //   shape: BoxShape.rectangle,
+                        //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
+                        // ),
+                        child: Image.asset(
+                          project["cover_image_url"],
+                          height: 300,
+                          width: double.infinity,
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(project["title"], style: theme.textTheme.headline4),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              project["subtitle"],
-                              style: theme.textTheme.bodyText2,
-                              textAlign: TextAlign.center,
+                      Container(
+                        // height: 150,
+                        width: double.infinity,
+                        // color: MyTheme.card_body_color,
+                        decoration: BoxDecoration(
+                          color: MyTheme.card_body_color,
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0)),
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(project["title"], style: theme.textTheme.bodyText2),
                             ),
-                          ),
-                          Expanded(
-                            child: Column(
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                project["subtitle"],
+                                style: theme.textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                                  child: ElevatedButton(
-                                    style: ElevatedButton.styleFrom(primary: Colors.red),
-                                    onPressed: () async {
-                                      final url = project["youtube_url"];
-                                      if (await canLaunch(url)) {
-                                        await launch(url);
-                                      } else {
-                                        throw 'Could not launch $url';
-                                      }
-                                    },
-                                    child: Row(
-                                      children: [
-                                        FaIcon(FontAwesomeIcons.youtube),
-                                        SizedBox(width: 10),
-                                        Text(
-                                          "Youtube",
-                                          style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                project["youtube_url"] == null
+                                    ? Container()
+                                    : Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(primary: Colors.red),
+                                          onPressed: () async {
+                                            final url = project["youtube_url"];
+                                            if (await canLaunch(url)) {
+                                              await launch(url);
+                                            } else {
+                                              throw 'Could not launch $url';
+                                            }
+                                          },
+                                          child: Row(
+                                            children: [
+                                              FaIcon(FontAwesomeIcons.youtube),
+                                              SizedBox(width: 10),
+                                              Text(
+                                                "Youtube",
+                                                style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                      ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: ElevatedButton(
                                     onPressed: () async {
                                       final url = project["repository_url"];
@@ -362,14 +360,14 @@ class _ProjectsMobile extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           );
         }).toList(),
       ),

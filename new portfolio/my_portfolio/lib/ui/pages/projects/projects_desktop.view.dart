@@ -61,19 +61,21 @@ class _ProjectsDesktop extends StatelessWidget {
         ),
       ),
     ];
-    body.add(Center(
+    
+        body.add(Center(
+        child: Text(
+      "My Top Flutter projects as Frontend Developer",
+      style: theme.textTheme.headline2,
+    )));
+    body.add(_projectItem2(g.flutter_projects, context));
+
+body.add(Center(
         child: Text(
       "My Top QT5 project as Embedded Systems Engineer",
       style: theme.textTheme.headline2,
     )));
     body.add(_projectItem(g.projects, context));
 
-    body.add(Center(
-        child: Text(
-      "My Top Flutter projects as Frontend Developer",
-      style: theme.textTheme.headline2,
-    )));
-    body.add(_projectItem2(g.flutter_projects, context));
 
     body.add(Center(
       child: Padding(
@@ -112,8 +114,8 @@ class _ProjectsDesktop extends StatelessWidget {
       )),
     );
     return ListView(
-      children: body.reversed.toList(),
-      // children: body,
+      // children: body.reversed.toList(),
+      children: body,
     );
   }
 
@@ -392,4 +394,5 @@ class _ProjectsDesktop extends StatelessWidget {
       ),
     );
   }
+
 }

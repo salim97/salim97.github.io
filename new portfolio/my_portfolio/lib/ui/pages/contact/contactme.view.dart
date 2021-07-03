@@ -23,9 +23,9 @@ class ContactMeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(tablet: 760, desktop: 1380, watch: 300),
-      mobile: _ContactMeMobile(theme),
       desktop: _ContactMeDesktop(theme),
       tablet: _ContactMeDesktop(theme),
+      mobile: _ContactMeMobile(theme),
     );
   }
 }

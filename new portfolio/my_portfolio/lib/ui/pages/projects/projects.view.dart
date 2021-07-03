@@ -22,10 +22,9 @@ class ProjectsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(tablet: 760, desktop: 1380, watch: 300),
-      mobile: _ProjectsMobile(theme),
       desktop: _ProjectsDesktop(theme),
-      // tablet: _ProjectsTablet(theme),
-      tablet: _ProjectsDesktop(theme),
+      tablet: _ProjectsTablet(theme),
+      mobile: _ProjectsMobile(theme),
     );
   }
 }
