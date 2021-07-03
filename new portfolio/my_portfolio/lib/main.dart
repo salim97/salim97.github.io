@@ -34,7 +34,7 @@ class MainWindow extends StatefulWidget {
 enum Menu { home, education, projects, contact_me }
 
 class _MainWindowState extends State<MainWindow> {
-  Menu menu = Menu.contact_me;
+  Menu menu = Menu.home;
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
