@@ -7,7 +7,7 @@ class _ContactMeMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-final width = MediaQuery.of(context).size.width;
+    final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     List<Widget> body = [
       Column(
@@ -141,16 +141,7 @@ final width = MediaQuery.of(context).size.width;
       ),
     ];
 
-    body.add(
-      Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: Text(
-        "Made with Flutter Web by Salim Benabadji",
-        style: theme.textTheme.subtitle2,
-      ),
-          )),
-    );
+    body.add(MyFooter());
     return ListView(
       // children: body.reversed.toList(),
       children: body,

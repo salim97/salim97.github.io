@@ -50,16 +50,7 @@ class _EducationMobile extends StatelessWidget {
 
     body.add(_certificationReceivedItem(context));
 
-    body.add(
-      Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: Text(
-        "Made with Flutter Web by Salim Benabadji",
-        style: theme.textTheme.subtitle2,
-      ),
-          )),
-    );
+    body.add(MyFooter());
     return ListView(
       // children: body.reversed.toList(),
       children: body,

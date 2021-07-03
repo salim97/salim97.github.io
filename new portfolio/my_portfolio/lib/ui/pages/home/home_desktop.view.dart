@@ -43,11 +43,13 @@ class _HomeDesktop extends StatelessWidget {
                               Icons.play_arrow_rounded,
                               color: MyTheme.secondaryText_color,
                             ),
-                            TyperAnimatedTextKit(
-                              isRepeatingAnimation: true,
-                              speed: Duration(milliseconds: 50),
-                              textStyle: theme.textTheme.subtitle1,
-                              text: g.nickname,
+                            Flexible(
+                              child: TyperAnimatedTextKit(
+                                isRepeatingAnimation: true,
+                                speed: Duration(milliseconds: 50),
+                                textStyle: theme.textTheme.subtitle1,
+                                text: g.nickname,
+                              ),
                             ),
                           ],
                         ),
@@ -138,16 +140,7 @@ class _HomeDesktop extends StatelessWidget {
       body.add(_whatIdoItem(element, context));
     });
 
-    body.add(
-      Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: Text(
-        "Made with Flutter Web by Salim Benabadji",
-        style: theme.textTheme.subtitle2,
-      ),
-          )),
-    );
+    body.add(MyFooter());
     return ListView(
       // children: body.reversed.toList(),
       children: body,
@@ -206,9 +199,12 @@ class _HomeDesktop extends StatelessWidget {
                           children: [
                             Icon(Icons.star, color: Colors.yellow),
                             SizedBox(width: 5),
-                            Text(
-                              e,
-                              style: theme.textTheme.subtitle2,
+                            Flexible(
+                              child: Text(
+                                e,
+                                style: theme.textTheme.subtitle2,
+                               
+                              ),
                             ),
                           ],
                         ),

@@ -73,16 +73,7 @@ class _EducationDesktop extends StatelessWidget {
 
     body.add(_certificationReceivedItem(context));
 
-    body.add(
-      Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: Text(
-        "Made with Flutter Web by Salim Benabadji",
-        style: theme.textTheme.subtitle2,
-      ),
-          )),
-    );
+    body.add(MyFooter());
     return ListView(
       // children: body.reversed.toList(),
       children: body,
@@ -110,8 +101,8 @@ class _EducationDesktop extends StatelessWidget {
                 width: 200.0,
               ),
             ),
-            SizedBox(
-              width: width * 0.7,
+            Expanded(
+              // width: width * 0.6,
               child: Card(
                 elevation: 10.0,
                 color: Colors.transparent,
@@ -230,7 +221,7 @@ class _EducationDesktop extends StatelessWidget {
         crossAxisCount: 3,
         crossAxisSpacing: 50,
         mainAxisSpacing: 50,
-        childAspectRatio: 2.2,
+        // childAspectRatio: 2.2,
         children: certifications.map((certification) {
           return HoverButton(
             onpressed: () async {
@@ -260,13 +251,13 @@ class _EducationDesktop extends StatelessWidget {
                       ),
                       child: Image.asset(
                         certification["logo_path"],
-                        height: 400,
-                        width: 400,
+                        height: 250,
+                        width: 300,
                       ),
                     ),
                   ),
                   Container(
-                    height: 110,
+                    // height: 110,
                     width: double.infinity,
                     // color: MyTheme.card_body_color,
                     decoration: BoxDecoration(

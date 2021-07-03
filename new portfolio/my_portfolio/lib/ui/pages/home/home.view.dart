@@ -8,6 +8,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:my_portfolio/portfolio.dart' as g;
 import 'package:my_portfolio/theme.dart';
 import 'package:my_portfolio/ui/widgets/entranceFader.widget.dart';
+import 'package:my_portfolio/ui/widgets/footer.widget.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:url_launcher/url_launcher.dart';

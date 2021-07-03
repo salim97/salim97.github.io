@@ -1,7 +1,7 @@
 part of home_view;
 
 class _HomeMobile extends StatelessWidget {
-   final ThemeData theme;
+  final ThemeData theme;
 
   _HomeMobile(this.theme);
 
@@ -119,24 +119,12 @@ class _HomeMobile extends StatelessWidget {
       body.add(_whatIdoItem(element, context));
     });
 
-    body.add(
-      Center(
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 18.0),
-            child: Text(
-        "Made with Flutter Web by Salim Benabadji",
-        style: theme.textTheme.subtitle2,
-      ),
-          )),
-    );
+    body.add(MyFooter());
     return ListView(
       // children: body.reversed.toList(),
       children: body,
     );
   }
-
-
-
 
   _whatIdoItem(element, context) {
     final width = MediaQuery.of(context).size.width;
@@ -162,21 +150,29 @@ class _HomeMobile extends StatelessWidget {
                 child: Icon(
                   element["softwareSkills"][index]["fontAwesomeClassname"] as IconData,
                   color: element["softwareSkills"][index]["style"]["backgroundColor"] as Color,
-                  size: 32.0,
+                  size: 48.0,
                 ),
                 // child: Icon(SimpleIcons.github),
               );
             }),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 50),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: skills.map((e) {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  e,
-                  style: theme.textTheme.subtitle2,
+                child: Row(
+                  children: [
+                    Icon(Icons.star, color: Colors.yellow),
+                    SizedBox(width: 5),
+                    Flexible(
+                      child: Text(
+                        e,
+                        style: theme.textTheme.subtitle2,
+                      ),
+                    ),
+                  ],
                 ),
               );
             }).toList(),
@@ -189,5 +185,4 @@ class _HomeMobile extends StatelessWidget {
       ),
     );
   }
-
 }

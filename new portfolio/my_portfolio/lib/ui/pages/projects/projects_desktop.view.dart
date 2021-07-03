@@ -112,8 +112,8 @@ class _ProjectsDesktop extends StatelessWidget {
       )),
     );
     return ListView(
-      // children: body.reversed.toList(),
-      children: body,
+      children: body.reversed.toList(),
+      // children: body,
     );
   }
 
@@ -122,14 +122,14 @@ class _ProjectsDesktop extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 90.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),
       child: GridView.count(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
         crossAxisSpacing: 50,
         mainAxisSpacing: 50,
-        childAspectRatio: 2.9,
+        childAspectRatio: 2.7,
         children: projects.map((project) {
           return HoverButton(
             onpressed: () async {
@@ -159,7 +159,7 @@ class _ProjectsDesktop extends StatelessWidget {
                     child: Image.asset(
                       project["cover_image_url"],
                       // height: 400,
-                      // width: 400,
+                       width: 200,
                     ),
                   ),
                   Expanded(
@@ -256,73 +256,75 @@ class _ProjectsDesktop extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 80.0, horizontal: 90.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
       child: GridView.count(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 2,
-        crossAxisSpacing: 50,
-        mainAxisSpacing: 50,
-        childAspectRatio: 1.4,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        childAspectRatio: 1.3,
         children: projects.map((project) {
-          return HoverButton(
-            onpressed: () async {
-              final url = project["repository_url"];
-              if (await canLaunch(url)) {
-                await launch(url);
-              } else {
-                throw 'Could not launch $url';
-              }
-            },
-            child: Card(
-              elevation: 10.0,
-              color: Colors.transparent,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              child: Column(
-                children: [
-                  Container(
-                    // width: double.infinity,
-                    // color: MyTheme.card_header_color,
-                    // decoration: BoxDecoration(
-                    //   color: certification["color_code"] as Color,
-                    //   shape: BoxShape.rectangle,
-                    //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
-                    // ),
-                    child: Image.asset(
-                      project["cover_image_url"],
-                      height: 350,
-                      width: double.infinity,
-                      fit: BoxFit.fill,
-                    ),
+          return Column(
+       
+            children: [
+              HoverButton(
+                onpressed: () async {
+                  final url = project["repository_url"];
+                  if (await canLaunch(url)) {
+                    await launch(url);
+                  } else {
+                    throw 'Could not launch $url';
+                  }
+                },
+                child: Card(
+                  elevation: 1.0,
+                  color: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0),
                   ),
-                  Expanded(
-                    child: Container(
-                      // height: 150,
-                      width: double.infinity,
-                      // color: MyTheme.card_body_color,
-                      decoration: BoxDecoration(
-                        color: MyTheme.card_body_color,
-                        shape: BoxShape.rectangle,
-                        borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0)),
+                  child: Column(
+                    
+                    children: [
+                      Container(
+                        // width: double.infinity,
+                        // color: MyTheme.card_header_color,
+                        // decoration: BoxDecoration(
+                        //   color: certification["color_code"] as Color,
+                        //   shape: BoxShape.rectangle,
+                        //   borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
+                        // ),
+                        child: Image.asset(
+                          project["cover_image_url"],
+                          height: 300,
+                          width: double.infinity,
+                          fit: BoxFit.fill,
+                        ),
                       ),
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(project["title"], style: theme.textTheme.bodyText2),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              project["subtitle"],
-                              style: theme.textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
-                              textAlign: TextAlign.center,
+                      Container(
+                        // height: 150,
+                        width: double.infinity,
+                        // color: MyTheme.card_body_color,
+                        decoration: BoxDecoration(
+                          color: MyTheme.card_body_color,
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0)),
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(project["title"], style: theme.textTheme.bodyText2),
                             ),
-                          ),
-                          Expanded(
-                            child: Row(
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                project["subtitle"],
+                                style: theme.textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 project["youtube_url"] == null
@@ -376,14 +378,15 @@ class _ProjectsDesktop extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                        ],
+                          
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
+            ],
           );
         }).toList(),
       ),
