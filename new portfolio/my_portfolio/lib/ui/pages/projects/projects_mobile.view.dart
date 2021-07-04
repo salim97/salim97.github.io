@@ -240,14 +240,14 @@ class _ProjectsMobile extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+      padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 0.0),
       child: GridView.count(
         shrinkWrap: true,
         physics: NeverScrollableScrollPhysics(),
         crossAxisCount: 1,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
-        childAspectRatio: (width / height) +0.25,
+        childAspectRatio: (width / height) +0.20,
         children: projects.map((project) {
           return Column(
             children: [
