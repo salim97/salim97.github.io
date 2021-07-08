@@ -104,7 +104,7 @@ class _EducationTablet extends StatelessWidget {
             Expanded(
               // width: width * 0.6,
               child: Card(
-                elevation: 10.0,
+                elevation: 0.0,
                 color: Colors.transparent,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0),

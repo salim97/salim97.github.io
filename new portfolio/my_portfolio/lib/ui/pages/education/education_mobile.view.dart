@@ -90,6 +90,7 @@ class _EducationMobile extends StatelessWidget {
                   Container(
                     height: 170,
                     // color: MyTheme.card_header_color,
+                    width: double.infinity,
                     decoration: BoxDecoration(
                       color: MyTheme.card_header_color,
                       shape: BoxShape.rectangle,
