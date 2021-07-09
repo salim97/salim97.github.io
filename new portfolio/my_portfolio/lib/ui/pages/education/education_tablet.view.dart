@@ -71,7 +71,7 @@ class _EducationTablet extends StatelessWidget {
       body.add(_degreeReceivedItem(element, context));
     });
 
-    body.add(_certificationReceivedItem(context));
+    // body.add(_certificationReceivedItem(context));
 
     body.add(MyFooter());
     return ListView(
@@ -87,8 +87,8 @@ class _EducationTablet extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: height * 0.35,
+      child: Container(
+        height: height * 0.37,
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -103,6 +103,7 @@ class _EducationTablet extends StatelessWidget {
             ),
             Expanded(
               // width: width * 0.6,
+              // width: double.infinity,
               child: Card(
                 elevation: 10.0,
                 color: Colors.transparent,
@@ -112,40 +113,34 @@ class _EducationTablet extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      height: 100,
+                      // height: 100,
+                      width: double.infinity,
                       // color: MyTheme.card_header_color,
                       decoration: BoxDecoration(
                         color: MyTheme.card_header_color,
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.only(topLeft: Radius.circular(15.0), topRight: Radius.circular(15.0)),
                       ),
-                      child: Stack(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Positioned(
-                            bottom: 0,
-                            right: 0,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(element["duration"], style: theme.textTheme.headline4!.copyWith(fontSize: 16)),
-                            ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(element["title"], style: theme.textTheme.headline4!.copyWith(fontSize: 23)),
                           ),
-                          Positioned(
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Flexible(child: Text(element["title"], style: theme.textTheme.headline4!.copyWith(fontSize: 23))),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            left: 0,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(element["subtitle"], style: theme.textTheme.headline4!.copyWith(fontSize: 18)),
-                            ),
-                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(element["subtitle"], style: theme.textTheme.headline4!.copyWith(fontSize: 18)),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(element["duration"], style: theme.textTheme.headline4!.copyWith(fontSize: 16)),
+                              ),
+                            ],
+                          )
                         ],
                       ),
                     ),
@@ -287,5 +282,4 @@ class _EducationTablet extends StatelessWidget {
       ),
     );
   }
-
 }
