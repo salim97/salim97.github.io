@@ -287,4 +287,5 @@ class _EducationTablet extends StatelessWidget {
       ),
     );
   }
+
 }

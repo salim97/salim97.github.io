@@ -24,8 +24,9 @@ class EducationView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
       breakpoints: ScreenBreakpoints(tablet: 760, desktop: 1380, watch: 300),
-      desktop: _EducationDesktop(theme),
-      tablet: _EducationTablet(theme),
+      desktop: _EducationDesktop(theme, false),
+      tablet: Container(child: _EducationDesktop(theme, true)),
+      // tablet: _EducationTablet(theme),
       mobile: _EducationMobile(theme),
     );
   }
