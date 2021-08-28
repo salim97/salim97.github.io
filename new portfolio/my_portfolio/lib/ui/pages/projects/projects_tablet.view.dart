@@ -1,9 +1,7 @@
 part of projects_view;
 
 class _ProjectsTablet extends StatelessWidget {
-  final ThemeData theme;
-
-  _ProjectsTablet(this.theme);
+  _ProjectsTablet();
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +26,14 @@ class _ProjectsTablet extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Projects",
-                      style: theme.textTheme.headline1,
+                      style: Theme.of(context).textTheme.headline1,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "My projects makes use of vast variety of latest technology tools",
-                      style: theme.textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.subtitle1,
                     ),
                   ),
                 ],
@@ -65,14 +63,14 @@ class _ProjectsTablet extends StatelessWidget {
     body.add(Center(
         child: Text(
       "My Top Flutter projects as Frontend Developer",
-      style: theme.textTheme.headline2,
+      style: Theme.of(context).textTheme.headline2,
     )));
     body.add(_projectItem2(g.flutter_projects, context));
 
     body.add(Center(
         child: Text(
       "My Top QT5 project as Embedded Systems Engineer",
-      style: theme.textTheme.headline2,
+      style: Theme.of(context).textTheme.headline2,
     )));
     body.add(_projectItem(g.projects, context));
 
@@ -93,7 +91,7 @@ class _ProjectsTablet extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               "More Projects",
-              style: theme.textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+              style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
             ),
           ),
         ),
@@ -108,7 +106,7 @@ class _ProjectsTablet extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 18.0),
         child: Text(
           "Made with Flutter Web by Salim Benabadji",
-          style: theme.textTheme.subtitle2,
+          style: Theme.of(context).textTheme.subtitle2,
         ),
       )),
     );
@@ -177,11 +175,11 @@ class _ProjectsTablet extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(project["title"], style: theme.textTheme.bodyText2),
+                            child: Text(project["title"], style: Theme.of(context).textTheme.bodyText2),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(project["subtitle"], style: theme.textTheme.bodyText2),
+                            child: Text(project["subtitle"], style: Theme.of(context).textTheme.bodyText2),
                           ),
                           Expanded(
                             child: Row(
@@ -207,7 +205,7 @@ class _ProjectsTablet extends StatelessWidget {
                                               SizedBox(width: 10),
                                               Text(
                                                 "Youtube",
-                                                style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                                style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
                                               ),
                                             ],
                                           ),
@@ -230,7 +228,7 @@ class _ProjectsTablet extends StatelessWidget {
                                         SizedBox(width: 10),
                                         Text(
                                           "Source Code",
-                                          style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                          style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
                                         ),
                                       ],
                                     ),
@@ -313,13 +311,13 @@ class _ProjectsTablet extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(project["title"], style: theme.textTheme.bodyText2),
+                              child: Text(project["title"], style: Theme.of(context).textTheme.bodyText2),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 project["subtitle"],
-                                style: theme.textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
+                                style: Theme.of(context).textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -346,7 +344,7 @@ class _ProjectsTablet extends StatelessWidget {
                                               SizedBox(width: 10),
                                               Text(
                                                 "Youtube",
-                                                style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                                style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
                                               ),
                                             ],
                                           ),
@@ -369,7 +367,7 @@ class _ProjectsTablet extends StatelessWidget {
                                         SizedBox(width: 10),
                                         Text(
                                           "Source Code",
-                                          style: theme.textTheme.button!.copyWith(color: Colors.white),
+                                          style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
                                         ),
                                       ],
                                     ),

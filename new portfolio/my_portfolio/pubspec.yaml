@@ -36,6 +36,7 @@ dependencies:
   hovering: ^1.0.4
   animated_text_kit: ^4.2.1
   scrollable_positioned_list: ^0.1.10
+  get: ^4.3.8
 
 dev_dependencies:
   flutter_test:

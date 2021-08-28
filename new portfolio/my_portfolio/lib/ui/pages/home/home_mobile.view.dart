@@ -1,9 +1,7 @@
 part of home_view;
 
 class _HomeMobile extends StatelessWidget {
-  final ThemeData theme;
-
-  _HomeMobile(this.theme);
+  _HomeMobile();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class _HomeMobile extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               g.full_name,
-              style: theme.textTheme.headline1,
+              style: Theme.of(context).textTheme.headline1,
               textAlign: TextAlign.center,
             ),
           ),
@@ -38,7 +36,7 @@ class _HomeMobile extends StatelessWidget {
                     TyperAnimatedTextKit(
                       isRepeatingAnimation: true,
                       speed: Duration(milliseconds: 50),
-                      textStyle: theme.textTheme.subtitle1,
+                      textStyle: Theme.of(context).textTheme.subtitle1,
                       text: g.nickname,
                     ),
                   ],
@@ -50,7 +48,7 @@ class _HomeMobile extends StatelessWidget {
               width: width,
               child: Text(
                 g.subTitle,
-                style: theme.textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyText1,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -62,6 +60,7 @@ class _HomeMobile extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: FloatingActionButton(
+                  heroTag: null,
                   onPressed: () async {
                     final url = g.socialMediaLinks.elementAt(index)["link"].toString();
                     if (await canLaunch(url)) {
@@ -93,7 +92,7 @@ class _HomeMobile extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "See My Resume ( CV )",
-                  style: theme.textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                  style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -111,7 +110,7 @@ class _HomeMobile extends StatelessWidget {
       Center(
           child: Text(
         "What I Do ?",
-        style: theme.textTheme.headline2,
+        style: Theme.of(context).textTheme.headline2,
       )),
     ];
 
@@ -139,7 +138,7 @@ class _HomeMobile extends StatelessWidget {
         children: [
           Text(
             element["title"],
-            style: theme.textTheme.headline3,
+            style: Theme.of(context).textTheme.headline3,
             textAlign: TextAlign.center,
           ),
           Wrap(
@@ -169,7 +168,7 @@ class _HomeMobile extends StatelessWidget {
                     Flexible(
                       child: Text(
                         e,
-                        style: theme.textTheme.subtitle2,
+                        style: Theme.of(context).textTheme.subtitle2,
                       ),
                     ),
                   ],

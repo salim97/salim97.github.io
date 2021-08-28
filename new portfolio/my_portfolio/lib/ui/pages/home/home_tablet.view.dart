@@ -1,12 +1,10 @@
 part of home_view;
 
 class _HomeTablet extends StatelessWidget {
-   final ThemeData theme;
-
-  _HomeTablet(this.theme);
+  _HomeTablet();
 
   @override
-   Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
     List<Widget> body = [
@@ -28,7 +26,7 @@ class _HomeTablet extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       g.full_name,
-                      style: theme.textTheme.headline1,
+                      style: Theme.of(context).textTheme.headline1,
                     ),
                   ),
                   Padding(
@@ -47,7 +45,7 @@ class _HomeTablet extends StatelessWidget {
                               child: TyperAnimatedTextKit(
                                 isRepeatingAnimation: true,
                                 speed: Duration(milliseconds: 50),
-                                textStyle: theme.textTheme.subtitle1,
+                                textStyle: Theme.of(context).textTheme.subtitle1,
                                 text: g.nickname,
                               ),
                             ),
@@ -60,7 +58,7 @@ class _HomeTablet extends StatelessWidget {
                       width: width * 0.42,
                       child: Text(
                         g.subTitle,
-                        style: theme.textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyText1,
                       ),
                     ),
                   ),
@@ -71,6 +69,7 @@ class _HomeTablet extends StatelessWidget {
                       return Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: FloatingActionButton(
+                          heroTag: null,
                           onPressed: () async {
                             final url = g.socialMediaLinks.elementAt(index)["link"].toString();
                             if (await canLaunch(url)) {
@@ -102,7 +101,7 @@ class _HomeTablet extends StatelessWidget {
                         padding: const EdgeInsets.all(10.0),
                         child: Text(
                           "See My Resume ( CV )",
-                          style: theme.textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                          style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
                         ),
                       ),
                     ),
@@ -132,7 +131,7 @@ class _HomeTablet extends StatelessWidget {
       Center(
           child: Text(
         "What I Do ?",
-        style: theme.textTheme.headline2,
+        style: Theme.of(context).textTheme.headline2,
       )),
     ];
 
@@ -170,7 +169,7 @@ class _HomeTablet extends StatelessWidget {
                 children: [
                   Text(
                     element["title"],
-                    style: theme.textTheme.headline3,
+                    style: Theme.of(context).textTheme.headline3,
                   ),
                   Align(
                     alignment: Alignment.center,
@@ -202,8 +201,7 @@ class _HomeTablet extends StatelessWidget {
                             Flexible(
                               child: Text(
                                 e,
-                                style: theme.textTheme.subtitle2,
-                               
+                                style: Theme.of(context).textTheme.subtitle2,
                               ),
                             ),
                           ],
