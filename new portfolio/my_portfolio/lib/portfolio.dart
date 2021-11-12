@@ -9,8 +9,8 @@ String logo_name = "Salim";
 List<String> nickname = [" Flutter Developer", " Technical Writer", " Embedded System Enthusiast"];
 String subTitle =
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.";
-String resumeLink = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
-String portfolio_repository = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
+String resumeLink = "https://drive.google.com/file/d/1HqyFaY0LMBk37ENujNZAl-jmc0GiM-A_/view?usp=sharing";
+// String portfolio_repository = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
 String github_repository_link = "https://github.com/salim97?tab=repositories";
 
 const socialMediaLinks = [
