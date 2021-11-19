@@ -6,7 +6,7 @@ import 'app/theme.dart';
 import 'ui/pages/notfound/notfound.view.dart';
 
 void main() {
-    setPathUrlStrategy();
+  // setPathUrlStrategy();
   runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     builder: (context, child) {
