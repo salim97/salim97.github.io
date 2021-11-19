@@ -67,7 +67,7 @@ const RESOURCES = {
 "assets/assets/images/youtube-servo-motor-2018.gif": "8d6b009c018e95d61e5b77609c57a75d",
 "assets/FontManifest.json": "06ff67823d7b25e346e750202803c6a7",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "fbd2126b3dd39f487cb90f794804ca05",
+"assets/NOTICES": "b90bf92205802e146bd9a1f593046300",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "3241d1d9c15448a4da96df05f3292ffe",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "eaed33dc9678381a55cb5c13edaf241d",
@@ -76,9 +76,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "381248bedcd250e75cdbdd504fbb78f1",
-"/": "381248bedcd250e75cdbdd504fbb78f1",
-"main.dart.js": "03eb3e730a1f6955f4c63110e41941f0",
+"index.html": "c94743a817a730f18b51c1d89d845aed",
+"/": "c94743a817a730f18b51c1d89d845aed",
+"main.dart.js": "4b57a9122bad1b818e0a26e32af1f865",
 "manifest.json": "7268d731e85213fad6b35f4c3b52f2e6",
 "version.json": "aaafa928a4f8616604eca12d830fe765"
 };
