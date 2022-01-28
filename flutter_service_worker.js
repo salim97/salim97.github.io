@@ -67,20 +67,24 @@ const RESOURCES = {
 "assets/assets/images/youtube-servo-motor-2018.gif": "8d6b009c018e95d61e5b77609c57a75d",
 "assets/FontManifest.json": "06ff67823d7b25e346e750202803c6a7",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "b90bf92205802e146bd9a1f593046300",
+"assets/NOTICES": "2db1ea8e09e69820e609b5cf3296aff0",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "3241d1d9c15448a4da96df05f3292ffe",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "eaed33dc9678381a55cb5c13edaf241d",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "ffed6899ceb84c60a1efa51c809a57e4",
 "assets/packages/simple_icons/fonts/SimpleIcons.ttf": "cc90f9ea1bf926d9d8ee1fe568a63d99",
+"canvaskit/canvaskit.js": "43fa9e17039a625450b6aba93baf521e",
+"canvaskit/canvaskit.wasm": "04ed3c745ff1dee16504be01f9623498",
+"canvaskit/profiling/canvaskit.js": "f3bfccc993a1e0bfdd3440af60d99df4",
+"canvaskit/profiling/canvaskit.wasm": "a9610cf39260f60fbe7524a785c66101",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "f947c084d65ee96e53ed26771556b9d1",
-"/": "f947c084d65ee96e53ed26771556b9d1",
-"main.dart.js": "03eb3e730a1f6955f4c63110e41941f0",
+"index.html": "3beb929aa3083055ef908dec089e5897",
+"/": "3beb929aa3083055ef908dec089e5897",
+"main.dart.js": "316b420808d55917b574f9954e6a71b8",
 "manifest.json": "7268d731e85213fad6b35f4c3b52f2e6",
-"version.json": "aaafa928a4f8616604eca12d830fe765"
+"version.json": "9b818ca9511483c901bed1545384376c"
 };
 
 // The application shell files that are downloaded before a service worker can

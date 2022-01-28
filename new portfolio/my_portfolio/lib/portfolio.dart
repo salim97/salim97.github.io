@@ -9,7 +9,7 @@ String logo_name = "Salim";
 List<String> nickname = [" Flutter Developer", " Technical Writer", " Embedded System Enthusiast"];
 String subTitle =
     "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.";
-String resumeLink = "https://drive.google.com/file/d/1HqyFaY0LMBk37ENujNZAl-jmc0GiM-A_/view?usp=sharing";
+String resumeLink = "https://drive.google.com/file/d/1fQbNBPnNts0NvmwPu6hz80OsKBs13b5-/view?usp=sharing";
 // String portfolio_repository = "https://drive.google.com/file/d/1eCrMAJLbuuqfeCj3za_bvtODb4XfikI9/view?usp=sharing";
 String github_repository_link = "https://github.com/salim97?tab=repositories";
 
@@ -259,8 +259,7 @@ const projects = [
   },
   {
     "title": "My Mini Radar - Qt + ESP8266 + MG996R + HC SR04",
-    "subtitle":
-        "building simple radar using ESP8266 and servo motor MG 996R and HC-SR04.",
+    "subtitle": "building simple radar using ESP8266 and servo motor MG 996R and HC-SR04.",
     "cover_image_url": "assets/images/My-Mini-Radar.gif",
     "repository_url": "https://github.com/salim97/My-Mini-Radar",
     "youtube_url": "https://www.youtube.com/watch?v=iYSFZ4Aru64",
@@ -298,8 +297,7 @@ const flutter_projects = [
   },
   {
     "title": "My Portfolio with Flutter Web",
-    "subtitle":
-        "rebuilding my portfolio using flutter web",
+    "subtitle": "rebuilding my portfolio using flutter web",
     "cover_image_url": "assets/images/flutter_portfolio.png",
     "repository_url": "https://github.com/salim97/salim97.github.io",
     "youtube_url": null,
