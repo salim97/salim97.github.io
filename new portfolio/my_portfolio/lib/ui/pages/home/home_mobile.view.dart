@@ -16,7 +16,7 @@ class _HomeMobile extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               g.full_name,
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
               textAlign: TextAlign.center,
             ),
           ),
@@ -36,7 +36,7 @@ class _HomeMobile extends StatelessWidget {
                     TyperAnimatedTextKit(
                       isRepeatingAnimation: true,
                       speed: Duration(milliseconds: 50),
-                      textStyle: Theme.of(context).textTheme.subtitle1,
+                      textStyle: Theme.of(context).textTheme.titleMedium,
                       text: g.nickname,
                     ),
                   ],
@@ -48,7 +48,7 @@ class _HomeMobile extends StatelessWidget {
               width: width,
               child: Text(
                 g.subTitle,
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -69,7 +69,7 @@ class _HomeMobile extends StatelessWidget {
                       throw 'Could not launch $url';
                     }
                   },
-                  child: FaIcon(g.socialMediaLinks.elementAt(index)["fontAwesomeIcon"] as IconData),
+                  child: FaIcon(g.socialMediaLinks.elementAt(index)["fontAwesomeIcon"] as IconData, color: Colors.white),
                   backgroundColor: g.socialMediaLinks.elementAt(index)["backgroundColor"] as Color,
                 ),
               );
@@ -79,7 +79,7 @@ class _HomeMobile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: MyTheme.jacketColor),
+              style: ElevatedButton.styleFrom(backgroundColor: MyTheme.jacketColor),
               onPressed: () async {
                 final url = g.resumeLink;
                 if (await canLaunch(url)) {
@@ -92,7 +92,7 @@ class _HomeMobile extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   "See My Resume ( CV )",
-                  style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+                  style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
                 ),
               ),
             ),
@@ -110,7 +110,7 @@ class _HomeMobile extends StatelessWidget {
       Center(
           child: Text(
         "What I Do ?",
-        style: Theme.of(context).textTheme.headline2,
+        style: Theme.of(context).textTheme.displayMedium,
       )),
     ];
 
@@ -138,7 +138,7 @@ class _HomeMobile extends StatelessWidget {
         children: [
           Text(
             element["title"],
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
             textAlign: TextAlign.center,
           ),
           Wrap(
@@ -168,7 +168,7 @@ class _HomeMobile extends StatelessWidget {
                     Flexible(
                       child: Text(
                         e,
-                        style: Theme.of(context).textTheme.subtitle2,
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                     ),
                   ],

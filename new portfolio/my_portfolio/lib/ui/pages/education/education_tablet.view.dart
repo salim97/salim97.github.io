@@ -26,14 +26,14 @@ class _EducationTablet extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Education",
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.displayLarge,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Basic Qualification and Certifications",
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
                 ],
@@ -61,7 +61,7 @@ class _EducationTablet extends StatelessWidget {
       Center(
           child: Text(
         "Degrees Received",
-        style: Theme.of(context).textTheme.headline2,
+        style: Theme.of(context).textTheme.displayMedium,
       )),
     ];
 
@@ -124,18 +124,18 @@ class _EducationTablet extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(element["title"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 23)),
+                            child: Text(element["title"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23)),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(element["subtitle"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 18)),
+                                child: Text(element["subtitle"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 18)),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(element["duration"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 16)),
+                                child: Text(element["duration"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 16)),
                               ),
                             ],
                           )
@@ -162,7 +162,7 @@ class _EducationTablet extends StatelessWidget {
                               children: descriptions.map((e) {
                                 return Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Text(e, style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 18)),
+                                  child: Text(e, style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 18)),
                                 );
                               }).toList(),
                             ),
@@ -173,7 +173,7 @@ class _EducationTablet extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(18.0),
                               child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(primary: MyTheme.card_header_color),
+                                style: ElevatedButton.styleFrom(backgroundColor: MyTheme.card_header_color),
                                 onPressed: () async {
                                   final url = element["website_link"];
                                   if (await canLaunch(url)) {
@@ -184,7 +184,7 @@ class _EducationTablet extends StatelessWidget {
                                 },
                                 child: Text(
                                   "Visit Website",
-                                  style: Theme.of(context).textTheme.button!.copyWith(color: MyTheme.text_color),
+                                  style: Theme.of(context).textTheme.labelLarge!.copyWith(color: MyTheme.text_color),
                                 ),
                               ),
                             ),
@@ -263,11 +263,11 @@ class _EducationTablet extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(certification["title"], style: Theme.of(context).textTheme.headline4),
+                          child: Text(certification["title"], style: Theme.of(context).textTheme.headlineMedium),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(certification["subtitle"], style: Theme.of(context).textTheme.bodyText2),
+                          child: Text(certification["subtitle"], style: Theme.of(context).textTheme.bodyMedium),
                         ),
                       ],
                     ),

@@ -21,14 +21,14 @@ class _EducationMobile extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               "Education",
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.displayLarge,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
               "Basic Qualification and Certifications",
-              style: Theme.of(context).textTheme.subtitle1,
+              style: Theme.of(context).textTheme.titleMedium,
               textAlign: TextAlign.center,
             ),
           ),
@@ -38,7 +38,7 @@ class _EducationMobile extends StatelessWidget {
       Center(
           child: Text(
         "Degrees Received",
-        style: Theme.of(context).textTheme.headline2,
+        style: Theme.of(context).textTheme.displayMedium,
       )),
     ];
 
@@ -100,15 +100,15 @@ class _EducationMobile extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(element["title"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 23)),
+                          child: Text(element["title"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 23)),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(element["subtitle"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 18)),
+                          child: Text(element["subtitle"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 18)),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 1.0),
-                          child: Text(element["duration"], style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 16)),
+                          child: Text(element["duration"], style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 16)),
                         ),
                       ],
                     ),
@@ -134,7 +134,7 @@ class _EducationMobile extends StatelessWidget {
                               return Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(e,
-                                    style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 18, fontWeight: FontWeight.w400)),
+                                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(fontSize: 18, fontWeight: FontWeight.w400)),
                               );
                             }).toList(),
                           ),
@@ -145,7 +145,7 @@ class _EducationMobile extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(18.0),
                             child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(primary: MyTheme.card_header_color),
+                              style: ElevatedButton.styleFrom(backgroundColor: MyTheme.card_header_color),
                               onPressed: () async {
                                 final url = element["website_link"];
                                 if (await canLaunch(url)) {
@@ -156,7 +156,7 @@ class _EducationMobile extends StatelessWidget {
                               },
                               child: Text(
                                 "Visit Website",
-                                style: Theme.of(context).textTheme.button!.copyWith(color: MyTheme.text_color),
+                                style: Theme.of(context).textTheme.labelLarge!.copyWith(color: MyTheme.text_color),
                               ),
                             ),
                           ),
@@ -234,11 +234,11 @@ class _EducationMobile extends StatelessWidget {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(certification["title"], style: Theme.of(context).textTheme.headline4),
+                          child: Text(certification["title"], style: Theme.of(context).textTheme.headlineMedium),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Text(certification["subtitle"], style: Theme.of(context).textTheme.bodyText2),
+                          child: Text(certification["subtitle"], style: Theme.of(context).textTheme.bodyMedium),
                         ),
                       ],
                     ),

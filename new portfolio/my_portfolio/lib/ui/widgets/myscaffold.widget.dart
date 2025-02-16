@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/app/apppages.dart';
 import 'package:my_portfolio/app/theme.dart';
-import 'package:my_portfolio/ui/pages/notfound/notfound.view.dart';
 
 import 'navBarLogo.widget.dart';
-import 'dart:html' as html;
 
 enum Menu { home, education, projects, contact_me }
 
@@ -57,7 +55,7 @@ class MyScaffold extends StatelessWidget {
                     "Home",
                     style: Theme.of(context)
                         .textTheme
-                        .button!
+                        .labelLarge!
                         .copyWith(fontWeight: menu == Menu.home ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                   ),
                 ),
@@ -72,7 +70,7 @@ class MyScaffold extends StatelessWidget {
                     "Education",
                     style: Theme.of(context)
                         .textTheme
-                        .button!
+                        .labelLarge!
                         .copyWith(fontWeight: menu == Menu.education ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                   ),
                 ),
@@ -87,7 +85,7 @@ class MyScaffold extends StatelessWidget {
                     "Projects",
                     style: Theme.of(context)
                         .textTheme
-                        .button!
+                        .labelLarge!
                         .copyWith(fontWeight: menu == Menu.projects ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                   ),
                 ),
@@ -102,7 +100,7 @@ class MyScaffold extends StatelessWidget {
                     "Contact Me",
                     style: Theme.of(context)
                         .textTheme
-                        .button!
+                        .labelLarge!
                         .copyWith(fontWeight: menu == Menu.contact_me ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                   ),
                 ),
@@ -149,7 +147,7 @@ class MyScaffold extends StatelessWidget {
                               "Home",
                               style: Theme.of(context)
                                   .textTheme
-                                  .button!
+                                  .labelLarge!
                                   .copyWith(fontWeight: menu == Menu.home ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
@@ -166,7 +164,7 @@ class MyScaffold extends StatelessWidget {
                               "Education",
                               style: Theme.of(context)
                                   .textTheme
-                                  .button!
+                                  .labelLarge!
                                   .copyWith(fontWeight: menu == Menu.education ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
@@ -183,7 +181,7 @@ class MyScaffold extends StatelessWidget {
                               "Projects",
                               style: Theme.of(context)
                                   .textTheme
-                                  .button!
+                                  .labelLarge!
                                   .copyWith(fontWeight: menu == Menu.projects ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),
@@ -200,7 +198,7 @@ class MyScaffold extends StatelessWidget {
                               "Contact Me",
                               style: Theme.of(context)
                                   .textTheme
-                                  .button!
+                                  .labelLarge!
                                   .copyWith(fontWeight: menu == Menu.contact_me ? FontWeight.w700 : FontWeight.w400, color: Colors.black),
                             ),
                           ),

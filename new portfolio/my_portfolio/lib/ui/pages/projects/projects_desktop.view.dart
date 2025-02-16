@@ -26,14 +26,14 @@ class _ProjectsDesktop extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "Projects",
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.displayLarge,
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       "My projects makes use of vast variety of latest technology tools",
-                      style: Theme.of(context).textTheme.subtitle1,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
                 ],
@@ -63,14 +63,14 @@ class _ProjectsDesktop extends StatelessWidget {
     body.add(Center(
         child: Text(
       "My Top Flutter projects as Frontend Developer",
-      style: Theme.of(context).textTheme.headline2,
+      style: Theme.of(context).textTheme.displayMedium,
     )));
     body.add(_projectItem2(g.flutter_projects, context));
 
     body.add(Center(
         child: Text(
       "My Top QT5 project as Embedded Systems Engineer",
-      style: Theme.of(context).textTheme.headline2,
+      style: Theme.of(context).textTheme.displayMedium,
     )));
     body.add(_projectItem(g.projects, context));
 
@@ -78,7 +78,7 @@ class _ProjectsDesktop extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ElevatedButton(
-          style: ElevatedButton.styleFrom(primary: MyTheme.jacketColor),
+          style: ElevatedButton.styleFrom(backgroundColor: MyTheme.jacketColor),
           onPressed: () async {
             final url = g.github_repository_link;
             if (await canLaunch(url)) {
@@ -91,7 +91,7 @@ class _ProjectsDesktop extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               "More Projects",
-              style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+              style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
             ),
           ),
         ),
@@ -106,7 +106,7 @@ class _ProjectsDesktop extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 18.0),
         child: Text(
           "Made with Flutter Web by Salim Benabadji",
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       )),
     );
@@ -175,11 +175,11 @@ class _ProjectsDesktop extends StatelessWidget {
                         children: [
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(project["title"], style: Theme.of(context).textTheme.bodyText2),
+                            child: Text(project["title"], style: Theme.of(context).textTheme.bodyMedium),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(project["subtitle"], style: Theme.of(context).textTheme.bodyText2),
+                            child: Text(project["subtitle"], style: Theme.of(context).textTheme.bodyMedium),
                           ),
                           Expanded(
                             child: Row(
@@ -190,7 +190,7 @@ class _ProjectsDesktop extends StatelessWidget {
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(primary: Colors.red),
+                                          style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                                           onPressed: () async {
                                             final url = project["youtube_url"];
                                             if (await canLaunch(url)) {
@@ -201,11 +201,11 @@ class _ProjectsDesktop extends StatelessWidget {
                                           },
                                           child: Row(
                                             children: [
-                                              FaIcon(FontAwesomeIcons.youtube),
+                                              FaIcon(FontAwesomeIcons.youtube, color: Colors.white),
                                               SizedBox(width: 10),
                                               Text(
                                                 "Youtube",
-                                                style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
+                                                style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),
                                               ),
                                             ],
                                           ),
@@ -214,6 +214,9 @@ class _ProjectsDesktop extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                    ),
                                     onPressed: () async {
                                       final url = project["repository_url"];
                                       if (await canLaunch(url)) {
@@ -224,11 +227,11 @@ class _ProjectsDesktop extends StatelessWidget {
                                     },
                                     child: Row(
                                       children: [
-                                        FaIcon(FontAwesomeIcons.github),
+                                        FaIcon(FontAwesomeIcons.github, color: Colors.white),
                                         SizedBox(width: 10),
                                         Text(
                                           "Source Code",
-                                          style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
+                                          style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),
                                         ),
                                       ],
                                     ),
@@ -311,13 +314,13 @@ class _ProjectsDesktop extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: Text(project["title"], style: Theme.of(context).textTheme.bodyText2),
+                              child: Text(project["title"], style: Theme.of(context).textTheme.bodyMedium),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Text(
                                 project["subtitle"],
-                                style: Theme.of(context).textTheme.bodyText2!.copyWith(fontWeight: FontWeight.w400),
+                                style: Theme.of(context).textTheme.bodyMedium!.copyWith(fontWeight: FontWeight.w400),
                                 textAlign: TextAlign.center,
                               ),
                             ),
@@ -329,7 +332,7 @@ class _ProjectsDesktop extends StatelessWidget {
                                     : Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: ElevatedButton(
-                                          style: ElevatedButton.styleFrom(primary: Colors.red),
+                                          style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                                           onPressed: () async {
                                             final url = project["youtube_url"];
                                             if (await canLaunch(url)) {
@@ -340,11 +343,11 @@ class _ProjectsDesktop extends StatelessWidget {
                                           },
                                           child: Row(
                                             children: [
-                                              FaIcon(FontAwesomeIcons.youtube),
+                                              FaIcon(FontAwesomeIcons.youtube, color: Colors.white),
                                               SizedBox(width: 10),
                                               Text(
                                                 "Youtube",
-                                                style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
+                                                style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),
                                               ),
                                             ],
                                           ),
@@ -353,6 +356,9 @@ class _ProjectsDesktop extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                    ),
                                     onPressed: () async {
                                       final url = project["repository_url"];
                                       if (await canLaunch(url)) {
@@ -363,11 +369,11 @@ class _ProjectsDesktop extends StatelessWidget {
                                     },
                                     child: Row(
                                       children: [
-                                        FaIcon(FontAwesomeIcons.github),
+                                        FaIcon(FontAwesomeIcons.github, color: Colors.white ),
                                         SizedBox(width: 10),
                                         Text(
                                           "Source Code",
-                                          style: Theme.of(context).textTheme.button!.copyWith(color: Colors.white),
+                                          style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white),
                                         ),
                                       ],
                                     ),
